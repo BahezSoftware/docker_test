@@ -8,7 +8,9 @@ on:
 jobs:
   message:
     runs-on: ubuntu-latest
-
+   
     steps:
-      - name: Print message
-        run: echo "Hello, world!"
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Print readme
+        run: cat README.md
